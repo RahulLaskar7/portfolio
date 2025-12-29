@@ -8,26 +8,28 @@ import "./Contact.css";
 function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+ const sendEmail = (e) => {
+  e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_x00zftn",   
-        "template_9op5rfi",  
-        form.current,
-        "Mu-3_aiqVxR3uSiFF"  
-      )
-      .then(
-        () => {
-          alert("Message sent successfully!");
-          e.target.reset();
-        },
-        () => {
-          alert("Failed to send message. Please try again.");
-        }
-      );
-  };
+  emailjs
+    .sendForm(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      form.current,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then(
+      () => {
+        alert("Message sent successfully!");
+        e.target.reset();
+      },
+      (error) => {
+        console.error(error);
+        alert("Failed to send message. Try again.");
+      }
+    );
+};
+
 
   return (
     <section className="contact-section">
