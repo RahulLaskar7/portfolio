@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import emailjs from "@emailjs/browser"; 
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+
 import "./Contact.css";
 
 function Contact() {
@@ -73,19 +75,38 @@ function Contact() {
               </div>
 
               <div className="contact-social-block">
-                <h5>Connect with me</h5>
-                <div className="social-icons">
-                  <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                    <FaFacebookF />
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                    <FaTwitter />
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                    <FaInstagram />
-                  </a>
-                </div>
-              </div>
+  <h5>Connect with me</h5>
+  <div className="social-icons">
+    {/* LINKEDIN */}
+    <a
+      href="https://www.linkedin.com/in/rahul-laskar-5036b3339/"
+      target="_blank"
+      rel="noreferrer"
+      title="LinkedIn"
+    >
+      <FaLinkedinIn />
+    </a>
+
+    {/* TWITTER */}
+    <a
+      href="https://x.com/laskarrahul2002"
+      target="_blank"
+      rel="noreferrer"
+      title="Twitter"
+    >
+      <FaTwitter />
+    </a>
+
+    {/* EMAIL */}
+    <a
+      href="mailto:laskarrahul2002@gmail.com?subject=Contact from Portfolio"
+      title="Email Me"
+    >
+      <AiOutlineMail />
+    </a>
+  </div>
+</div>
+
 
             </div>
           </Col>

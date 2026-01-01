@@ -3,64 +3,70 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
   AiOutlineTwitter,
-  AiFillInstagram,
+  AiOutlineMail,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
+
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>Designed and Developed by RAHUL LASKAR</h3>
         </Col>
+
         <Col md="4" className="footer-copywright">
           <h3>Copyright © {year} RL</h3>
         </Col>
+
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
               <a
                 href="https://github.com/RahulLaskar7"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <AiFillGithub />
               </a>
             </li>
-            <li className="social-icons">
-              <a
-                href="https://twitter.com"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiOutlineTwitter />
-              </a>
-            </li>
+
             <li className="social-icons">
               <a
                 href="https://www.linkedin.com/in/rahul-laskar-5036b3339/"
                 style={{ color: "white" }}
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
               </a>
             </li>
+
             <li className="social-icons">
               <a
-                href="https://www.instagram.com"
+                href="mailto:laskarrahul2002@gmail.com?subject=Contact from Portfolio"
                 style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
+                title="Email Me"
               >
-                <AiFillInstagram />
+                <AiOutlineMail />
               </a>
             </li>
+
+            <li className="social-icons">
+              <a
+                href="https://x.com/laskarrahul2002"
+                style={{ color: "white" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineTwitter />
+              </a>
+            </li>
+
           </ul>
         </Col>
       </Row>

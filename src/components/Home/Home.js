@@ -4,14 +4,15 @@ import homeLogo from "../../Assets/home-main.jpg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
-import Techstack from "../About/Techstack";
-import Github from "../About/Github";
+// import Techstack from "../About/Techstack";
+// import Github from "../About/Github";
 
 import {
   AiFillGithub,
   AiOutlineTwitter,
-  AiFillInstagram,
+  AiOutlineMail,
 } from "react-icons/ai";
+
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Home() {
@@ -70,16 +71,7 @@ function Home() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
+              
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/rahul-laskar-5036b3339/"
@@ -90,16 +82,28 @@ function Home() {
                   <FaLinkedinIn />
                 </a>
               </li>
+
               <li className="social-icons">
                 <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="mailto:laskarrahul2002@gmail.com?subject=Contact from Portfolio&body=Hi Rahul,%0D%0A%0D%0AI visited your portfolio and want to connect with you."
                   className="icon-colour home-social-icons"
+                  title="_blank"
                 >
-                  <AiFillInstagram />
+                  <AiOutlineMail />
                 </a>
               </li>
+
+               <li className="social-icons">
+                <a
+                  href="https://x.com/laskarrahul2002"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                >
+                  <AiOutlineTwitter />
+                </a>
+              </li>
+
             </ul>
           </Col>
         </Row>
